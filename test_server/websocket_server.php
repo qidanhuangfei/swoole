@@ -11,7 +11,7 @@ $ws = new swoole_websocket_server('192.168.10.24', '9502');
 //监听WebSocket连接打开事件
 
 $ws->on('open', function ($ws, $request) {
-    var_dump($request->fd, $request->get, $request->server);
+    var_dump($request->fd);
     $ws->push($request->fd, "hello, welcome\n");
 });
 
