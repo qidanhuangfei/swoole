@@ -8,7 +8,7 @@
 $server = new swoole_server('127.0.0.1', '9501');
 //监听连接进入事件
 $server->on('connect', function ($server, $fd) {
-    echo 'Client: Connected!\n';
+    echo "Client: Connected!\n";
 });
 //监听数据接收事件
 $server->on('receive', function ($server, $fd, $from_id, $data) {
