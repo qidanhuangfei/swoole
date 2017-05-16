@@ -5,13 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+<input type="button" onclick="sendmessage()"  value="发送"/>
 <script>
     var wsServer = 'ws://192.168.10.24:9502';
     var websocket = new WebSocket(wsServer);
     websocket.onopen = function (evt) {
         console.log("Connected to WebSocket server.");
     };
-    websocket.send("hello tb");
+    websocket.send();
     websocket.onclose = function (evt) {
         console.log("Disconnected");
     };
@@ -23,6 +24,7 @@
     websocket.onerror = function (evt, e) {
         console.log('Error occured: ' + evt.data);
     };
+
 </script>
 </body>
 </html>
