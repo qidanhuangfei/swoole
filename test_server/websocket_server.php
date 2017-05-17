@@ -6,7 +6,7 @@
  */
 
 //创建websocket服务器对象，监听0.0.0.0:9502端口
-$ws = new swoole_websocket_server('192.168.10.24', '9502');
+$ws = new swoole_websocket_server('192.168.10.24', '9503');
 
 //监听WebSocket连接打开事件
 
